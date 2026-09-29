@@ -27,3 +27,17 @@ services:
       - infra-network
     ports:
       - "6379:6379"
+    command: redis-server --save 20 1 --loglevel warning --requirepass ${REDIS_PASSWORD}
+  
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: url-shortener-api
+    depends_on:
+      - cassandra-1
+      - redis
+    networks:
+      - infra-network
+    ports:
+      - "8080:8080"

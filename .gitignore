@@ -364,3 +364,5 @@ FodyWeavers.xsd
 
 appsettings.json
 /src/UrlShortener.Api/appsettings.json
+
+.env

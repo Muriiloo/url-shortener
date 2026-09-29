@@ -24,7 +24,7 @@ public static class DependencyInjection
         });
 
         var cluster = Cluster.Builder()
-            .AddContactPoint("localhost")
+            .AddContactPoint("cassandra-1")
             .WithPort(9042)
             .Build();
 
