@@ -18,7 +18,7 @@ public class RedirectLongUrlUseCase
     
     {
         if (shortCode.Length <= 0)
-            throw new InvalidCastException("Invalid shortCode.");
+            throw new InvalidCastException("Invalid code.");
 
         var urlCaching = await _urlCache.GetAsync(shortCode);
 
