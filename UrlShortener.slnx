@@ -8,4 +8,7 @@
     <Project Path="src/UrlShortener.Domain/UrlShortener.Domain.csproj" />
     <Project Path="src/UrlShortener.Infra/UrlShortener.Infra.csproj" />
   </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/UrlShortener.Tests/UrlShortener.Tests.csproj" Id="0b79f6ac-be75-4439-b188-8df412091c54" />
+  </Folder>
 </Solution>
