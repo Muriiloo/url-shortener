@@ -1,0 +1,28 @@
+networks:
+  infra-network:
+
+services:
+
+  cassandra-1:
+    image: cassandra:latest
+    container_name: cassandra-1
+    hostname: cassandra-1
+    networks:
+      - infra-network
+    ports:
+      - "9042:9042"
+
+    environment:
+      CASSANDRA_CLUSTER_NAME: url-shortener-cluster
+      CASSANDRA_DC: dc1
+      CASSANDRA_RACK: rack1
+      CASSANDRA_SEEDS: cassandra-1
+
+  redis:
+    image: redis:latest
+    container_name: redis
+    hostname: redis
+    networks:
+      - infra-network
+    ports:
+      - "6379:6379"
